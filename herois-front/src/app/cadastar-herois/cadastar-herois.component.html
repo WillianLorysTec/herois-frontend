@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+        defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap">
+
+    <title>Cadastrar Herois</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <header id="container-header">
+                <div class="justify-content-center col-xm-4" id="banner-img">
+                    <img src="/assets/Criando_Herois.png" alt="heroi-banner">
+                </div>
+            </header>
+        </div>
+        <div class="container">
+            <div class="row form form-label">
+                <div class="col-xs-2 col-5">
+                    <input type="text" class="form-control custom-input" id="nome-certidao"
+                       [(ngModel)]="nome" placeholder="digite o nome:">
+                </div>
+
+                <div class="col-xs-2 col-5">
+                    <input type="text" class="form-control custom-input" id="nome-heroi"
+                    [(ngModel)]="nomeHeroi" placeholder="digite o nome do herói:">
+                </div>
+            </div>
+            <div class="row form">
+                <div class="col-xs-2 col-5">
+                    <input type="number" class="form-control custom-input" id="exampleFormControlInput1"
+                    [(ngModel)]="peso" placeholder="peso do herói:">
+                </div>
+                <div class="col-xs-2 col-5">
+                    <input type="number" class="form-control custom-input" id="exampleFormControlInput1"
+                    [(ngModel)]="altura" placeholder="altura do herói:">
+                </div>
+            </div>
+            <div class="row form">
+                <div class="col-xs-2 col-10">
+                    <div class="drop-container">
+                        <form [formGroup]="form">
+                            <ng-multiselect-dropdown formControlName="grocery" [placeholder]="'Selecione um ou mais superpoderes:'"
+                                [settings]="dropdownSettings" [data]="dropdownList">
+                            </ng-multiselect-dropdown>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-xs-2 col-4">
+                    <input type="date" name="dataNascimento"
+                        class="form-control custom-input" [(ngModel)]="dataNascimento">
+                        <span id="nascimento-text">Digite a data de nascimento do herói:</span>
+                </div>
+                    <div class="col-xs-2 col-3">
+                        <button (click)="ListarHerois()"  type="button" class="btn btn-primary custom-btn">Listar Heróis</button>
+                    </div>
+                    <div class="col-xs-2 col-2">
+                        <button (click)="CriarHeroi()" type="button" class="btn btn-secondary custom-btn">Criar Herói</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

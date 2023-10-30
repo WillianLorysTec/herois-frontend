@@ -1,0 +1,69 @@
+<header>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-6 text-center">
+        <img src="./assets/Listagem_Heroi.png" id="banner-header">
+      </div>
+    </div>
+  </div>
+</header>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <table class="table table-striped table-hover table-bordered table-rounded">
+        <thead class="bg-light">
+          <tr>
+            <th>Nome do heroí</th>
+            <th>Nascimento do heroí</th>
+            <th>Peso</th>
+            <th>Altura</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of dados">
+            <td>
+              <div class="d-flex align-items-start ml-0">
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">{{ item.nomeHeroi }}</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">{{ item.dataNascimento | date: "dd/MM/yyyy" }}</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">{{ item.peso }}</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">{{ item.altura }}</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="ms-3">
+                  <button type="button" (click)="EditarHeroi(item.id)" class="btn btn-primary btn-sm">Editar</button>
+                </div>
+                <div class="ms-3">
+                  <button type="button" (click)="ExcluirHeroi(item.id)" class="btn btn-primary btn-sm">Excluir</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</body>

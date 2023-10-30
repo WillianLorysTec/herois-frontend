@@ -1,0 +1,100 @@
+*{
+  
+    background-color: #00F5FF;
+}
+
+#banner-img{
+    display: flex;
+}
+
+#nascimento-text {
+    font-size: 18px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    font-weight: bold; /* Negrito */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    display: block; /* Torna a mensagem uma linha separada */
+    text-align: start; /* Alinha o texto ao centro */
+}
+.form{
+    margin-bottom: 20px;
+    border-radius: 5px solid #22B9FF;
+    justify-content: center;
+}
+
+.form-control{
+    color: #35414c;
+    border: none;
+    border-radius: 25px;
+    background-color: #22B9FF;
+    height: 65px;
+}
+
+
+.custom-input{
+    font-size: 35px;
+    font-family: 'Jua', sans-serif;
+}
+
+
+.custom-select-lg {
+    padding: 10px; /* Espaçamento interno */
+    width: 100%; /* Largura total */
+    min-height: 100px;
+    max-height: 150px;
+    font-size: 16px; /* Tamanho da fonte do select */
+
+}
+.multiselect-dropdown{
+    border: none;
+}
+
+.drop-container {
+    font-family: Arial, sans-serif;
+    background-color: #22B9FF;
+    padding: 20px;
+    height: 65px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+.multi{
+    height: 150px;
+}
+#disable-border{
+    border: none;
+}
+/* Estilize a opção padrão "Selecione uma opção" */
+.custom-select-lg option[disabled] {
+    color: #999; /* Cor do texto da opção desativada */
+}
+
+.custom-btn {
+    width: 200px; /* Defina a largura desejada em pixels */
+    height: 65px; /* Defina a altura desejada em pixels */
+}
+
+.btn-primary{
+    font-size: 25px;
+    font-family: 'Jua', sans-serif;
+    color: white;
+    background-color: #FA6101;
+}
+
+.btn-secondary {
+    font-size: 25px;
+    font-family: 'Jua', sans-serif;
+    color: white;
+    background-color: #F80068;
+}
+
+
+  
